@@ -1,7 +1,7 @@
 {
   "name": "@sh/react-form-engine",
   "version": "0.0.1",
-  "description": "react drag and drop sorting supports flex layout",
+  "description": "react form engine",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --config ./config/webpack.prod.js",
