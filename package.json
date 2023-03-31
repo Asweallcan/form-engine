@@ -1,0 +1,57 @@
+{
+  "name": "@sh/react-form-engine",
+  "version": "0.0.1",
+  "description": "react drag and drop sorting supports flex layout",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --config ./config/webpack.prod.js",
+    "dev:site": "rm -rf build && webpack-dev-server --config ./config/webpack.dev.js --open",
+    "build:site": "rm -rf examples_dist index.html && webpack --config ./config/webpack.site.js && mv ./examples_dist/index.html ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Asweallcan/react-form-engine"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "engine",
+    "component"
+  ],
+  "files": [
+    "dist",
+    "types"
+  ],
+  "types": "types/index.d.ts",
+  "author": "shihaolv <296877137@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/lodash": "^4.14.177",
+    "@types/react": "^16.8.0",
+    "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^2.0.7",
+    "fast-deep-equal": "^3.1.3",
+    "html-webpack-plugin": "^5.5.0",
+    "lodash": "^4.17.21",
+    "styled-components": "^5.3.9",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-merge": "^5.8.0",
+    "react": "^16.8.0"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  }
+}
