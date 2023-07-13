@@ -1,6 +1,6 @@
 {
-  "name": "@sh/react-form-engine",
-  "version": "0.0.1",
+  "name": "react-form-engine-lite",
+  "version": "1.0.0",
   "description": "react form engine",
   "main": "dist/index.js",
   "scripts": {
@@ -49,6 +49,7 @@
     "postcss-loader": "^7.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-form-engine-lite": "^1.0.0",
     "style-loader": "^3.3.3",
     "styled-components": "^5.3.9",
     "ts-loader": "^9.2.6",
@@ -61,5 +62,9 @@
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Asweallcan/react-form-engine/issues"
+  },
+  "homepage": "https://github.com/Asweallcan/react-form-engine#readme"
 }

@@ -16,9 +16,7 @@ import { Ref, Props, Errors, Component, Wrapper as WrapperType } from "./types";
 import { Title, Wrapper } from "./style";
 import { Widgets, Wrappers, EmptyObject } from "./constants";
 
-export const FormEngine: (
-  props: Props & { ref?: ForwardedRef<Ref> | RefObject<Ref> }
-) => JSX.Element | null = forwardRef((props, ref) => {
+export const FormEngine = forwardRef<Ref, Props>((props, ref) => {
   const { style, title, layout, className } = props;
 
   const onChangeCallback = useRefCallback(props.onChange);

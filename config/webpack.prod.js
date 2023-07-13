@@ -19,7 +19,7 @@ module.exports = merge(baseConfig, {
     path: path.resolve(__dirname, "../dist"),
     filename: "index.js",
     library: {
-      name: "@sh/react-form-engine",
+      name: "react-form-engine-lite",
       type: "umd",
     },
   },

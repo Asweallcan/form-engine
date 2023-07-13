@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "antd";
+import { FormEngine, Ref } from "react-form-engine-lite";
 
-import "antd/dist/reset.css";
-
-import { FormEngine, Ref } from "../src";
 import { FormWrapper } from "./style";
 import { useRef } from "react";
 

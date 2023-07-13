@@ -1,7 +1,6 @@
 import React from "react";
 import { Checkbox, Radio, Select, Switch, Input, InputNumber } from "antd";
-
-import { registWidgets, registWrappers } from "../src/index";
+import { registWidgets, registWrappers } from "react-form-engine-lite";
 
 export const init = () => {
   registWidgets({

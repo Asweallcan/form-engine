@@ -23,7 +23,6 @@ export type Field<K extends string = string> = {
     props?: any;
     title?: ReactNode;
     hidden?: boolean;
-    tooltip?: ReactNode;
     disabled?: boolean;
     required?: boolean;
     mutations?: RestrictKeyRecord<K, Mutation>;
@@ -34,13 +33,9 @@ export type LayoutItem<T extends string = string> = T | {
     field: T;
     style: CSSProperties;
 } | {
-    wrapper?: "FlexRow" | "FlexColumn";
+    wrapper?: string | Wrapper;
     style?: CSSProperties;
     title?: ReactNode;
-    children: LayoutItem<T>[];
-} | {
-    wrapper?: Wrapper;
-    style?: CSSProperties;
     children: LayoutItem<T>[];
 } | LayoutItem<T>[];
 export type Value<K extends string = string> = RestrictKeyRecord<K, any>;
@@ -71,6 +66,3 @@ export type Ref = {
         valid: boolean;
     }>;
 };
-export type TooltipInfoIconType = ComponentType<{
-    tooltip: ReactNode;
-}>;

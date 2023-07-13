@@ -2,7 +2,7 @@ import React from "react";
 import { omit } from "lodash";
 
 import { FormItem } from "./FormItem";
-import * as BuiltInWrappers from "./Wrappers";
+import BuiltInWrappers from "./Wrappers";
 import { LayoutItem as LayoutItemType } from "../types";
 import { Wrappers } from "../constants";
 
