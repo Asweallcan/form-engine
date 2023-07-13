@@ -65,19 +65,15 @@ export const FormEngine: (
   );
 });
 
-export const RegisterWidgets = (
-  ...widgets: Array<{ name: string; Component: Component<any> }>
-) => {
-  widgets.forEach((widget) => {
-    Widgets[widget.name] = widget.Component;
+export const registWidgets = (widgets: Record<string, Component<any>>) => {
+  Object.entries(widgets).forEach(([name, Component]) => {
+    Widgets[name] = Component;
   });
 };
 
-export const RegisterWrappers = (
-  ...wrappers: Array<{ name: string; Component: WrapperType<any> }>
-) => {
-  wrappers.forEach((wrapper) => {
-    Wrappers[wrapper.name] = wrapper.Component;
+export const registWrappers = (wrappers: Record<string, WrapperType<any>>) => {
+  Object.entries(wrappers).forEach(([name, Component]) => {
+    Wrappers[name] = Component;
   });
 };
 

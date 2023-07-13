@@ -16,13 +16,14 @@ export const executeFieldMutation = async (params: {
     Object.entries(fieldsRef.current[name].mutations || {})
       .filter(([targetField]) => fieldsRef.current[targetField])
       .map(async ([targetField, mutation]) => {
-        const res = await mutation?.(
-          get(valueRef.current, targetField),
-          get(valueRef.current, name)
-        );
+        const res =
+          (await mutation?.(
+            get(valueRef.current, targetField),
+            get(valueRef.current, name)
+          )) || {};
 
         if (
-          res?.value != undefined &&
+          "value" in res &&
           res.value !== get(valueRef.current, targetField)
         ) {
           valueUpdatedFields.push([targetField, res.value, false]);

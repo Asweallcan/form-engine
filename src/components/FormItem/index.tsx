@@ -33,7 +33,7 @@ export const FormItem: React.FC<{
     [name, onFieldBlur, onFieldFocus, onFieldChange]
   );
 
-  const { type, title, hidden, required, tooltip, ...fieldMeta } = field;
+  const { type, title, hidden, required, ...fieldMeta } = field;
 
   if (!field || hidden) return null;
 
@@ -57,7 +57,6 @@ export const FormItem: React.FC<{
           >
             {title}
           </TitleText>
-          {tooltip ? <Widgets.TooltipInfoIcon tooltip={tooltip} /> : null}
         </Title>
       ) : null}
 
