@@ -2,7 +2,7 @@
 
 React form engine, support any UI library.
 This package using hooks, note that your React version is above 16.8 :).
-[Playground](https://asweallcan.github.io/react-flex-dnd), the demo contains some examples of usage
+[Playground](https://asweallcan.github.io/react-form-engine/), the demo contains some examples of usage
 
 ## Core characteristics
 
@@ -292,6 +292,24 @@ type Component = ComponentType<{
 
 These props need to pass to a custom component
 
+## Submit
+
+When want to submit, we need to get if form is valid and form data
+
+```typescript
+const form = useRef<Ref>(null);
+
+<FormEngine ref={form} />;
+
+<Button
+  onClick={async () => {
+    const { value, valid } = await form.current!.submit();
+  }}
+>
+  Submit
+</Button>;
+```
+
 ## Timing
 
-Validation and mutation will execute on field onBlur, so ensure onBlur is called in custom component
+Validation and mutation will execute on field onBlur and submit, so ensure onBlur is called in custom component and call formRef.submit before you post
